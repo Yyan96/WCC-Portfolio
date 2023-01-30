@@ -14,7 +14,7 @@ let food = [];
 // let slider;
 
 function setup() {
-  canvas = createCanvas(600, 600);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("sketch-container"); //move our canvas inside this HTML element
 
   for (let i = 0; i < 20; i++) {
@@ -66,7 +66,7 @@ function updateFood() {
 
 function addGUI() {
   //add sliders
-  slider = createSlider(0, 255, 0, 10);
+  slider = createSlider(0, 255, 0, 1);
   slider.addClass("slider");
 
   //Add the slider to the parent gui HTML element
