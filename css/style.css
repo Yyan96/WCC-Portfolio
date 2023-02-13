@@ -69,12 +69,34 @@ footer{
     transition: all 0.2s; /* CSS transitions https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
 }
 
+.flex-item a#T2week1{
+    background-image: url(../assets/images/Week1.jpeg);
+}
+
+.flex-item a#T2week2{
+    background-image: url(../assets/images/Week2.jpeg);
+}
+
+.flex-item a#T2week3{
+    background-image: url(../assets/images/Week3.jpeg);
+}
+
+.flex-item a#T2week4{
+    background-image: url(../assets/images/Week4.jpeg);
+}
 /* want a different background image for each project? */
 /* try give each a tag a unique id in your HTML and then set different background images here*/
 /* EXAMPLE CSS: won't work if you just un-comment this:*/
 /* .flex-item a#my-special-id{
     background-image: url(../assets/images/custom-image-name.jpeg); 
 } */
+.flex-item a#T1work1{
+    background-image: url(../assets/images/T1.jpeg);
+}
+
+.flex-item a#T1work2{
+    background-image: url(../assets/images/T2.jpeg);
+}
 
 
 .flex-item a:hover{
