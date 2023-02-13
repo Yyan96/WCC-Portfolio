@@ -5,7 +5,7 @@ function setup() {
     createCanvas(600, 600);
     for (let i = 0; i < num; i++) {
         // arr[i] = new f(random(width), random(height));
-        arr[i] = new f(width / 3, height / 3);
+        arr[i] = new f(width /2, height / 2);
     }
     //print(arr);
 }
@@ -27,12 +27,12 @@ class f {
         this.y = y;
         this.w = random(5, 10);
         this.h = random(5, 10);
-        this.wX = random(100, 0.75 * width);
-        this.hX = random(100, 0.75 * height);
+        this.wX = random(300,  width);
+        this.hX = random(300,  height);
         this.r = random(-0.01, 0.01);
         this.b = random(0.001, 0.01);
         this.num = floor(random(10, 40));
-        this.col = floor(random(50, 100));
+        this.col = floor(random(50, 200));
         this.degrees = 0;
         this.newDeg = 0;
         this.newDegR = random(0.01, 0.05);
@@ -46,7 +46,7 @@ class f {
         colorMode(HSB, 360, 100, 30);
         blendMode(BLEND);
 
-        stroke(this.col,this.al,100, 40);
+        stroke(this.col + 100, this.al, 100, 40);
         strokeWeight(0.25);
 
     }
