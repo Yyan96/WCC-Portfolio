@@ -84,6 +84,10 @@ footer{
 .flex-item a#T2week4{
     background-image: url(../assets/images/Week4.jpeg);
 }
+
+.flex-item a#T2week8{
+    background-image: url(../assets/images/Week8.jpeg);
+}
 /* want a different background image for each project? */
 /* try give each a tag a unique id in your HTML and then set different background images here*/
 /* EXAMPLE CSS: won't work if you just un-comment this:*/
