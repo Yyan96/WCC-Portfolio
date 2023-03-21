@@ -89,6 +89,10 @@ footer{
     background-image: url(../assets/images/Homepage_bc.jpeg);
 }
 
+.flex-item a#T2week7{
+    background-image: url(../assets/images/Week7.jpeg);
+}
+
 .flex-item a#T2week8{
     background-image: url(../assets/images/Week8.jpeg);
 }
