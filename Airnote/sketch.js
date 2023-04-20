@@ -41,7 +41,7 @@ let prevPointer = [
 let fingertips = [8, 12, 16, 20];
 
 function setup() {
-  sketch = createCanvas(windowWidth, 480);
+  sketch = createCanvas(windowWidth, 640);
   background("#2d3263");
 
   //move our canvas inside this HTML element
