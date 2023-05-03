@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>WCC Portfolio - Demo Page</title>
+
+        <!-- including for some global styling -->
+        <link rel="stylesheet" href="../css/style.css">
+
+    </head>
+    <body>
+        <!-- if you have sub-pages think about adding a simple back button -->
+        <nav>
+            <a href="../">HOME</a>
+        </nav>
+        <header class="documentation-header">
+            <section class="center-text">
+                <h1>Air Note</h1>
+                <h2>by Yu Yan</h6>
+                <p>Audio-visual interactive works.</p> 
+            </section>
+        </header>
+
+        <main class="documentation-page">
+            <section>
+                <div class="responsive-video centered-content">
+                    <center>
+                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/822988753?h=fa0971ed34" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>></iframe>
+                    </center>
+                </div>
+            </section>
+            <section>
+                <h3>Introduction</h3>
+                <p>This is a gesture control music and painting interaction project based on handsfree.js. Users can use hand gestures to play note to create a song in front of the computer's camera.</p>
+            </section>
+            <section>
+                <h3>Concept and Background Research</h3>
+                
+                <p>Due to the epidemic's impact, many Chinese people have started various live broadcasts to pass the time of isolation at home. Among them, promoting traditional culture is particularly eye-catching, especially folk music [1], which makes Many people focus on learning Chinese traditional musical instruments, not only Concentrating on Western instruments such as the piano, violin and so on.</p>
+                <center><img src="../assets/images/640.jpeg" width="50%" height="50%"/></center>
+                <p>From this, I came up with an idea: a virtual guzheng, a musical instrument that can be played with just a computer and a webcam. Because many people cannot systematically learn traditional musical instruments due to age or work but still want to experience the fun of playing, so playing these musical instruments through computer simulation is the most convenient way. It not only allows people to feel the power of traditional rhythms but also allows people who cannot own musical instruments to simulate and feel the power and rhythm of these musical instruments through computers. </p>
+                <p>Furthermore, since some people don't know anything about rhythm, I addeThe colour matching is inspired by an animation work recently released in China, Deep Sea [3]. Although the film's storyline is simple, its pictures are very shocking. Matching with its corresponding contrasting colour highlights the mystery and vastness of the deep sea [4]. The animation creates the darkness of the deep sea and changes in light through gradient colours and shadow effects, allowing the audience to feel more immersive when appreciating the work.d the element of the painting, combining note and colour, so that people can feel the beauty of music more intuitively through the pictures they draw. This more intuitive and vivid feeling in hearing and vision can broaden people's cognition and appreciation of traditional music and promote cultural inheritance and development.</p>
+                <p>The colour matching is inspired by an animation work recently released in China, Deep Sea [3]. Although the film's storyline is simple, its pictures are very shocking. Matching with its corresponding contrasting colour highlights the mystery and vastness of the deep sea [4]. The animation creates the darkness of the deep sea and changes in light through gradient colours and shadow effects, allowing the audience to feel more immersive when appreciating the work.</p>
+
+                <!-- if you have a full width image try make it not too tall -->
+                <center><img src="../assets/images/7164.jpeg" width="100%" height="100%"/></center>
+                <p>There are two reasons for choosing the guzheng. Firstly, the guzheng appears most frequently in Chinese texts, novels and films and dramas, so it is the most well-known to the public. Secondly, I like the guzheng's sound and the players' gestures when they play it.</p>
+                
+            </section>
+            <section>
+                <h3>Technical Implementation</h3>
+
+                <!-- example of styling for three images, you can write your own styling -->
+                <div class="flex-container flex-basis-third">
+                    <div class="flex-item">
+                        <center><img src="../assets/images/handsfree.jpg" width="100%" height="100%"/></center>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/setup.jpeg" width="100%" height="100%"/></center>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/position.jpg" width="100%" height="100%"/></center>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/wave.jpg" width="100%" height="100%"/></center>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/pen.jpg" width="100%" height="50%"/></center>
+                    </div>
+                </div>
+                
+                <p>The whole code is done by p5js, and handsfree.js is used as gesture recognition library [5].</p>
+                <p>I called the initialization function provided by handsfree.js when it should be initialized, adding the gesture recognition function to the application and triggering notes and colours when the thumb touches other fingertips. In setup (), I introduced the handsfree.js plug-in and set the number of hands detected by the camera and the detection accuracy [6].</p>
+                <p>Then I customized a function waterrerPaint (), checked the coordinates of each finger and introduced notes, and changed the pitch of the notes according to the coordinates of the fingers [7], and will have a watercolour effect in the waterCol [8] graphics Draw on the canvas, and switch the colour according to the thumb touching different fingertips in handsDraw ().</p>
+                <p>At first, I used a solid colour as the background. Still, the effect was not very good, so to make the background better match the watercolour effect of the painting, I thought of making the canvas background closer to the texture of paper, so I in setup () Called paperTexture () [8] to add some texture to the background.</p>
+                <p>Finally, in order to make the whole picture richer before enabling Webcam, I added some particle effects drawWaves () [7], to simulate the colourful colours of different creatures in the deep sea.</p>
+                <!-- example of styling for three images, you can write your own styling -->
+                <div class="flex-container flex-basis-half">
+                    <div class="flex-item">
+                        <img src="../assets/images/texture1.jpg" width="100%" height="100%"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/background.jpeg" width="100%" height="100%"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/paint.jpeg" width="100%" height="100%"/>
+                    </div>
+                </div>
+         
+            </section>
+            <section>
+                <h3>Reflection and Future Development</h3>
+                <p>I want to add more elements before enabling the webcam to make the generated image richer, such as simulating the trajectory of fish schools and adding some seabed plants. Allows a canvas to be scrolled horizontally to an infinite canvas so that the area available for the drawing will be unlimited. Make some physical buttons or triggers to do the interaction without a computer keyboard. Finally, through the QR code or other technical means, the process of creating music and painting is preserved as a work with personal commemorative significance.</p>
+                <p>Perhaps it is because the accuracy of handsfree.js recognition is insufficient, so it is necessary to ensure that the entire camera background is clean and debris-free during operation. I am considering looking for more complete libraries and tutorials to remedy this shortcoming. At the same time, design a gesture that can trigger the project starts over to clear the canvas.</p>
+            
+            </section>
+            <section>
+                <h3>References</h3>
+                <ul>
+                    <li>Handsfree.js. Available at: https://handsfreejs.netlify.app/ref/model/hands.html#with-defaults .</li>
+                    <li>P5.js web editor. Available at: https://editor.p5js.org/Omnis/sketches/4f6R4-Tn9 . </li>
+                    <li>>P5.js web editor. Available at: https://editor.p5js.org/pixelfelt/sketches/oS5CwSbM1 .</li>
+                    <li>Deep Sea (film) (2023) Wikipedia. Wikimedia Foundation. Available at: https://en.wikipedia.org/wiki/Deep_Sea_(film) .</li>
+                    <li>Deep Sea (深海) 2023 trailer (China) (2023) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=d4KTh-2K38c .</li>
+                    <li>Watercolor effect and paper texture in p5.js (2022) YouTube. YouTube. Available at: https://www.youtube.com/watch?v=MEYdsoZua7E&amp;t=188s .</li>
+                    <li>从断层到传承，民乐在直播间"活"起来"火"下去 (no date) 微信公众平台. Available at: https://mp.weixin.qq.com/s/NS2L-rERSJdwgsasGGCiHw .</li> 
+                    <li>网易 (no date) 网易订阅. Available at: https://dy.163.com/ </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <!-- normally information like contact details etc  -->
+            <!-- read more about semantic HTML https://www.w3schools.com/html/html5_semantic_elements.asp -->
+            
+         </footer>
+    </body>
+</html>
