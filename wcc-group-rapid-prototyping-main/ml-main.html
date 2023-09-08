@@ -1,87 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Fanzy Tattoo</title>
-    <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
 
-    <link rel="stylesheet" href="css/style.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fanzy Tattoo</title>
+  <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="css/style.css" />
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-    <script
-      defer
-      language="javascript"
-      type="text/javascript"
-      src="js/detection.js"
-    ></script>
-    <script
-      defer
-      language="javascript"
-      type="text/javascript"
-      src="js/ml.js"
-    ></script>
-  </head>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 
-  <body>
-    <header style="position: fixed; margin: 0 0 0 40px;">
-      <a href="index.html"><img src="Assets/home.png" alt=""  id="home"></a>
+  <script defer language="javascript" type="text/javascript" src="js/detection.js"></script>
+  <script defer language="javascript" type="text/javascript" src="js/ml.js"></script>
+</head>
+
+<body>
+  <header style="position: fixed; margin: 0 0 0 40px;">
+    <a href="index.html"><img src="Assets/home.png" alt="" id="home"></a>
   </header>
-      <main id="ml-main">
-        <div class="container" >
-            <!-- phone  -->
-            <!-- open the webcam -->
-            <div class="smartphone">
-                <div id="cnv-vid-container">
-                  <video id="video"></video>
-                </div>
-            </div>
-            
-              <!-- tattoo images -->
-            <div class="filer-row">
-              <div id="lips" class="filter">
-                  <img class="avatar" src="Assets/lips.png" />
-                </div>
-                <div id="face" class="filter">
-                  <img class="avatar" src="Assets/tattoo10.png" />
-                </div>
-
-              <div id="eye" class="filter">
-                <img class="avatar" src="Assets/tattoo06.png" />
-              </div>
-            </div>
+  <main id="ml-main">
+    <div class="container">
+      <!-- phone  -->
+      <!-- open the webcam -->
+      <div class="smartphone">
+        <div id="cnv-vid-container">
+          <video id="video"></video>
         </div>
-      </main>
-  </body> 
+        <div class="btn-row" style="margin-top: 50px; display: flex; justify-content: center; align-items: flex-end;">
+          <a href="generate.html" id="back">back</a>
+        </div>        
+      </div>
+
+      <!-- tattoo images -->
+      <div class="filer-row">
+        <div id="lips" class="filter">
+          <img class="avatar" src="Assets/lips.png" />
+        </div>
+        <div id="face" class="filter">
+          <img class="avatar" src="Assets/tattoo10.png" />
+        </div>
+
+        <div id="eye" class="filter">
+          <img class="avatar" src="Assets/tattoo06.png" />
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>
-
-
