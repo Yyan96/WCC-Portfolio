@@ -143,3 +143,7 @@ p.detectEyes = function () {
 };
 
 let myp5 = new p5(sketch);
+
+function goBack() {
+  window.history.back()
+}
